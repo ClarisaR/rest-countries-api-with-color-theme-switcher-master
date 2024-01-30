@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,600;6..12,800&display=swap');
+
+:root {
+    --dark-blue: hsl(209, 23%, 22%);
+    --very-dark-blue-dark-mode-background: hsl(207, 26%, 17%);
+    --very-dark-blue-light-mode-text: hsl(200, 15%, 8%);
+    --Dark-gray: hsl(0, 0%, 52%);
+    --very-light-gray-light-mode-background: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+}
+
+.grid {
+    height: 100%;
+    display: grid;
+    grid-template-areas: "header"
+        "main";
+    grid-template-rows: 15% auto;
+}
+
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+}
+
+.header h3{
+    margin: auto 0;
+    text-align: start;
+}
+
+.header .mode{
+    margin: auto 0;
+}
+
+
+.container-mode img {
+    width: 10px;
+    height: 10px;
+}
+
+
+.main {
+    grid-area: main;
+    background-color: var(--very-light-gray-light-mode-background);
+    padding: 30px 10px;
+}
+
+.main .search-and-filter {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+    .main .search-and-filter{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.search-and-filter input{
+    padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .search-and-filter input{
+        width: 40%;
+    }
+}
+
+.search-and-filter select{
+    padding: 10px;
+    margin: 30px 0;
+    width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+    .search-and-filter select{
+        width: auto;
+    }
+}
+
+
+.countries{
+    display: grid;
+    row-gap: 50px;
+    margin: 30px;
+}
+
+@media screen and (min-width: 576px) {
+    .countries{
+        grid-template-columns: repeat(2, auto);
+        column-gap: 30px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .countries{
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+@media screen and (min-width: 996px) {
+    .countries{
+        grid-template-columns: repeat(4, auto);
+    }
+}
+
+@media screen and (min-width: 768px){
+    .grid-details{
+        height: 100%;
+        display: grid;
+        grid-template-areas: "header"
+            "main";
+        grid-template-rows: 15% 85%;
+    }
+}
+
+
+.flag{
+    width : 100%;
+    height: 50%;
+    border-radius: 5px 5px 0 0;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 768px){
+    .flag-details{
+        width: 50%;
+        object-fit: cover;
+    }
+}
+
+.country-container{
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px hsla(0, 0%, 95%, 1);
+}
+
+.country-description{
+    padding: 30px;
+}
+
+span{
+    font-weight: 800;
+}
+
+.country-container-details{
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+@media screen and (min-width: 768px) {
+    .country-container-details{
+        flex-direction: row;
+        padding: 20px 0;
+        height: 100%;
+    }
+}
+
+.titulo-select {
+    display: none;
+}
+
+.main-details{
+    padding: 50px 30px;
+}
+
+@media screen and (min-width: 768px) {
+    .main-details{
+        padding: 20px 30px 100px 30px;
+    }
+}
+
+.country-container-details h2{
+    padding: 30px 0;
+}
+
+@media screen and (min-width:768px) {
+    .country-description-details{
+        padding: 30px 0 30px 50px;
+    }
+}
+
+@media screen and (min-width:768px)  {
+    .details{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+
+.border-countries{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+
+.border-countries small{
+    flex: 1 0 100%;
+    font-size: 1.2em;
+}
+
+.border-countries a{
+    text-decoration: none;
+    color: black;
+    background-color: hsl(0, 0%, 82%);
+    padding: 10px;
+    margin: 10px 5px 5px 0;
+    font-size: 0.7em;
+}
+
+.secondary-details{
+    padding-top: 50px;
+}
+
+@media screen and (min-width: 768px) {
+    .secondary-details{
+        padding: 0;
+    }
+}
+
+.back-button{
+    padding: 10px 20px;
+    border: none;
+}
+
+.back-button .back-arrow{
+    width: 20px;
+    height: 10px;
+    padding-right: 5px;
+}
